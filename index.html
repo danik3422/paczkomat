@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normilize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Poczta Polska</title>
+</head>
+<body>
+  <div class="container" id="mainContent">
+    <div class="wrapper">
+
+    
+     <h1 class = "hero-txt">Envelo</h1>
+
+      <p>Mozesz miec przesylke w kilkanascie sekund.
+         Rozpocznij klikajac w przycisk.</p>
+
+      <div id="firstTask" class ="hero-btn">
+        <button class="collect-btn" onclick="goToInput()">Odbierz paczke</button>
+      </div>
+
+      <div id="secondTask" class="hidden">
+        <div>
+          <div>
+            <label for="phone">Numer telefonu: </label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" maxlength="9">
+          </div>
+        </div>
+
+
+        <div>
+          <div>
+            <label for="pickupCode">Kod odbioru: </label>
+            <input id="pickupCode" name="pickupCode" pattern="[0-9]{4}" maxlength="4" >
+          </div>
+        </div>
+        <button id="pickupButton" class="collectPackageBtn" onclick="finishWork()">Odbierz paczkę</button>
+      </div>
+
+      <div id="endedTask" class="hidden">
+        <h2>Paczka odebrana!</h2>
+        <p>Zrobiłeś to w czasie <span id="timeTaken"></span> sekund! Czy możemy zrobić dla Ciebie coś jeszcze?</p>
+        <button onclick="goToBegin()">To wszystko na dziś </button>
+        <button onclick="goToInput()">Odbierz kolejną paczkę </button>
+      </div>
+
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
