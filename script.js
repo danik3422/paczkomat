@@ -1,7 +1,6 @@
 let timerStart;
 let timerStop;
 
-
 function goToInput(){
     removeHidden("secondTask");
     addHidden("firstTask");
@@ -16,9 +15,7 @@ function finishWork(){
         addHidden("secondTask");
         timerStop = performance.now();
         displayTimeTaken();
-    } else{
-        displayModal();
-    }
+    } 
 }
 
 function goToBegin(){
@@ -26,7 +23,6 @@ function goToBegin(){
     addHidden("secondTask");
     addHidden("endedTask");
 }
-
 
 function removeHidden(elementId){
     const stepElement = document.getElementById(elementId);
@@ -45,10 +41,10 @@ function validateInputs(){
     return phoneInputElement.checkValidity() && pickupCodeInputElement.checkValidity();
 }
 
-
 function displayTimeTaken(){
     const timeTakenElement = document.getElementById("timeTaken");
     const timeTaken = Math.round((timerStop - timerStart)/1000);
 
     timeTakenElement.innerHTML = timeTaken;
 }
+
