@@ -56,10 +56,6 @@ button {
 	margin-bottom: 2px;
 }
 
-#secondTask > div:last-of-type > div {
-	margin-left: 0 auto;
-}
-
 .pickupButton {
 	position: absolute;
 	text-align: center;
